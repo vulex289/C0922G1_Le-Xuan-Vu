@@ -1,0 +1,9 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: border;
+    background: burlywood;
+}
+td, th {
+    padding: 8px;color: blue;
+}
+}
