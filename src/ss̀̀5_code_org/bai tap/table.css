@@ -1,7 +1,7 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: border;
-    background: burlywood;
+:nth-child(odd);
 }
 td, th {
     padding: 8px;color: blue;
