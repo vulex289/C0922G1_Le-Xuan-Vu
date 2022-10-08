@@ -26,21 +26,21 @@
             </td>
             <td><button type="submit" onclick="nhan()">Convert</button>
     </table>
-    <p id="8">So tien:</p>
+    <p><span id="8">sotien</span></p>
 </form>
 </body>
 <script>
-    debugger
     function nhan() {
-    let a= parseFloat(document.getElementById("tien").value);
-    let b= document.getElementById("nuoc").value;
-    let c= document.getElementById("2").value;
-    let d= a/22000;
-    let f= a*22000;
-    if (b=="VietNam" && c=="USD"){ document.writeln("="+f)};
-    if (b=="VietNam" && c=="VND"){ document.writeln("="+a)};
-    if (b=="My" && c=="VND"){document.writeln("="+d)};
-    if (b=="My" && c=="My"){ document.writeln("="+a)};
+    var a= parseFloat(document.getElementById("tien").value);
+    var b= document.getElementById("nuoc").value;
+    var c= document.getElementById("2").value;
+    var d= a/22000;
+    var f= a*22000;
+    if (b=="VietNam" && c=="USD"){document.getElementById("8").innerHTML=d};
+    console.log(a);
+    if (b=="VietNam" && c=="VND"){document.getElementById("8").innerHTML=a};
+    if (b=="My" && c=="VND"){document.getElementById("8").innerHTML=f};
+    if (b=="My" && c=="My"){ document.getElementById("8").innerHTML=a};
     }
 </script>
 </html>
