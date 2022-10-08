@@ -36,11 +36,10 @@
     var c= document.getElementById("2").value;
     var d= a/22000;
     var f= a*22000;
-    if (b=="VietNam" && c=="USD"){document.getElementById("8").innerHTML=d};
-    console.log(a);
-    if (b=="VietNam" && c=="VND"){document.getElementById("8").innerHTML=a};
-    if (b=="My" && c=="VND"){document.getElementById("8").innerHTML=f};
-    if (b=="My" && c=="My"){ document.getElementById("8").innerHTML=a};
+    if (b=="VietNam" && c=="USD"){alert(+d)};
+    if (b=="VietNam" && c=="VND"){alert(a)};
+    if (b=="My" && c=="VND"){alert(+f)};
+    if (b=="My" && c=="My"){alert(+a)};
     }
 </script>
 </html>
