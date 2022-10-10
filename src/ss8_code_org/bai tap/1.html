@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<button type="button" onclick="moveRight()">phải</button>
+    <input type="button" value="Trái" onclick="moveLeft()">
+    <input type="button" value="Lên" onclick="moveUp()">
+    <input type="button" value="xuống" onclick="moveDown()">
+    <img id="myimage" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg"width="200"/>
+<p>Click button below to move the image to right</p>
+</form>
+</body>
+<script>
+    let a= document.getElementById('myimage');
+    function init() {
+        a= document.getElementById('myimage');
+        a.style.position ='relative';
+        a.style.left='0px'
+        a.style.top='0px'
+    }
+    function moveRight() {
+        a.style.left= parseInt(a.style.left) + 10 + 'px';
+    }
+    function moveLeft(){
+        a.style.left= parseInt(a.style.left) - 10 +'px'
+    }
+    function moveUp() {
+        a.style.top = parseInt(a.style.top) - 10 + 'px'
+    }
+    function moveDown() {
+        a.style.top = parseInt(a.style.top) + 10 + 'px'
+    }
+window.onload=init;
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maytinh</title>
+</head>
+<body>
+<form>
+    <input type="text" id="chu">
+</form>
+<table>
+    <tr>
+        <td><button type="button" onclick="a()">1</button> </td>
+        <td><button type="button" onclick="b()">2</button> </td>
+        <td><button type="button" onclick="c()">3</button> </td>
+        <td><button type="button" onclick="cong()">+</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="d()">4</button> </td>
+        <td><button type="button" onclick="e()">5</button></td>
+        <td><button type="button" onclick="f()">6</button></td>
+        <td><button type="button" onclick="tru()">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="h()">7</button> </td>
+        <td><button type="button" onclick="i()">8</button></td>
+        <td><button type="button" onclick="g()">9</button></td>
+        <td><button type="button" onclick="nhan()">*</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="m()">AC</button> </td>
+        <td><button type="button" onclick="m()">0</button> </td>
+        <td><button type="button" onclick="equal()">=</button> </td>
+        <td><button type="button" onclick="chia()">/</button> </td>
+    </tr>
+</table>
+</body>
+<script>
+    let windowInput1=1;
+    function a() {
+        document.getElementById("chu").value += windowInput1 ;
+    }
+    let windowInput2=2;
+    function b() {
+        document.getElementById("chu").value += windowInput2 ;
+    }
+    let windowInput3=3;
+    function c() {
+        document.getElementById("chu").value += windowInput3 ;
+    }
+    let windowInput4=4;
+    function d() {
+        document.getElementById("chu").value += windowInput4 ;
+    }
+    let windowInput5=5;
+    function e() {
+        document.getElementById("chu").value += windowInput5 ;
+    }
+    let windowInput6=6;
+    function f() {
+        document.getElementById("chu").value += windowInput6;
+    }
+    let windowInput7=7;
+    function h() {
+        document.getElementById("chu").value += windowInput7 ;
+    }
+    let windowInput8=8;
+    function i() {
+        document.getElementById("chu").value += windowInput8 ;
+    }
+    let windowInput9=9;
+    function g() {
+        document.getElementById("chu").value += windowInput9 ;
+    }
+    let windowInputAC="";
+    function m() {
+        document.getElementById("chu").value = windowInputAC;
+    }
+    let windowInputPlus= "+"
+    function cong() {
+        document.getElementById("chu").value += windowInputPlus
+    }
+    let windowInputSub= "-"
+    function tru() {
+        document.getElementById("chu").value += windowInputSub
+    }
+    let windowInputPer= "*"
+    function nhan() {
+        document.getElementById("chu").value += windowInputPer
+    }
+    let windowInputDiv= "/"
+    function chia() {
+        document.getElementById("chu").value += windowInputDiv
+    }
+    function equal() {
+        let result= document.getElementById("chu").value
+        document.getElementById('chu').value= eval(result)
+    }
+</script>
+</html>
