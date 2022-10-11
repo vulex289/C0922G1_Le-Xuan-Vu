@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=parseFloat(prompt("nhap vao a"));
+    let b=parseFloat(prompt("nhap vao b"));
+    let c=parseFloat(prompt("nhap vao c"));
+    let delta=b*b-4*a*c;
+    if(a>0||a<0) {
+        if (delta === 0) {
+            let x1 = x2 = -b / (2 * a)
+            alert(x1)
+            alert(x2)
+        } else if (delta > 0) {
+            let x1 = (-b - Math.sqrt(delta)) / (2 * a)
+            let x2 = (-b + Math.sqrt(delta)) / (2 * a)
+            alert(x1)
+            alert(x2)
+        } else {
+            alert("phuong trinh vo nghiem")
+        }
+    }
+    else{
+        let x=-c/2*b
+        alert("phuong trinh bac nhat"+x)
+    }
+</script>
+</html>

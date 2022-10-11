@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let a=parseFloat(prompt("nhap vao a"));
+    let b=parseFloat(prompt("nhap vao b"));
+    let c=parseFloat(prompt("nhap vao c"));
+    if(a>0 && b>0 && c>0) {
+        if (a + b > c) {
+            alert("day la ba canh cua mot tam giac")
+        } else if (b + c > a) {
+            alert("day la ba canh cua mot tam giac")
+        } else if (a + c > b) {
+            alert("day la ba canh cua mot tam giac")
+        } else {
+            alert("day khong phai la ba canh cua tam giac")
+        }
+    }
+    else{alert("day kkong phai la ba canh cua mot tam giac")}
+</script>
+</html>

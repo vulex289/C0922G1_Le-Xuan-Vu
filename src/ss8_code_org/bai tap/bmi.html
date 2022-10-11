@@ -22,10 +22,10 @@
         let a= parseFloat(document.getElementById("weight").value);
         let b= parseFloat(document.getElementById("height").value);
         let bmi= a/Math.pow(b,2);
-        let result1="underWeight"
-        let result2="normal"
-        let result3="overWeight"
-        let result4="Obese"
+        let result1="result:"+"underWeight"
+        let result2="result:"+"normal"
+        let result3="result:"+"overWeight"
+        let result4="result:"+"Obese"
         if (bmi < 18.5 ){
             document.getElementById('result').innerHTML=result1
         }

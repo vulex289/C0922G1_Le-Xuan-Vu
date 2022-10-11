@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a =parseFloat(prompt("Nhap thu nhap"));
+    if(a>0&&a<5000000||a===5000000){
+        let b=a*0.05;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>5000000&&a<10000000||a===10000000){
+        let b=a*0.1;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>10000000&&a<18000000||a===18000000){
+        let b=a*0.15;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>18000000&&a<32000000||a===32000000){
+        let b=a*0.2;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>32000000&&a<52000000||a===52000000){
+        let b=a*0.25;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>52000000&&a<80000000||a===80000000){
+        let b=a*0.3;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else if(a>80000000){
+        let b=a*0.35;
+        alert("thue ban phai nop:"+b+"Vnd")
+    }
+    else{
+        alert("ban nhap sai thu nhap")
+    }
+
+</script>
+</html>

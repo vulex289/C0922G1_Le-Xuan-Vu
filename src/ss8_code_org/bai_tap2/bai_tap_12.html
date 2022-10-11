@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+let tienDau = parseFloat(prompt("Nhap so tien"));
+const laiSuat = 0.07;
+let thang = parseFloat(prompt("Nhap so thang"));
+let nam = parseFloat(prompt("Nhap so nam"));
+ lai = (tienDau *laiSuat)/12 * thang;
+ tienSau= tienDau+lai;
+if(nam===1 && thang===12){
+alert("tien 1 nam sau khi gui"+tien+"vnd");}
+else if(nam>1 && thang===12){
+    let n = parseInt(prompt("Nhap so lan duoc nhap tien lai cong goc moi nam"));
+    avg=n*nam;
+    avi=Math.pow((1+laiSuat/n),avg);
+     tienTuongLai = tienDau*avi;
+    alert(tienTuongLai);
+alert("tien tuong lai theo so nam:"+tienTuongLai+"Vnd");
+}
+else {
+alert("tien lai duoi 1 nam:"+tienSau+"Vnd");
+}
+</script>
+</html>
