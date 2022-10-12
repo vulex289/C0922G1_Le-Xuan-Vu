@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let nhietDo=prompt("moi ban nhap nhiet do");
+    while (nhietDo<20||nhietDo>100) {
+
+        if (nhietDo < 20) {
+            alert("vui long giam nhiet do");
+           nhietDo=prompt("moi ban nhap lai nhiet do");
+        } else if (nhietDo > 100) {
+            alert("vui long tang nhiet do");
+            nhietDo=prompt("moi ban nhap nhiet do");
+        }
+    }
+    alert("nhiet do binh thuong")
+
+
+</script>
+</html>
