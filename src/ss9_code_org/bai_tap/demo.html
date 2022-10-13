@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNt = prompt("nhap so bki:");
+    let dem = 0;
+    let demSnt = 0;
+    // for (let i = 2; i <= 100; i++) {
+    //     if (dem < soNt) {
+    //         for (let j = 1; j <=i; j++) {
+    //             if (i % j === 0) {
+    //                 dem++;
+    //             }
+    //
+    //         }
+    //             if (dem == 2) {
+    //                 document.write(i + "<br>");
+    //                 demSnt++
+    //             }
+    //         dem = 0;
+    //     }
+    //
+    // }
+    let i=2;
+while (dem<soNt) {
+        for (let j = 1; j <= i; j++) {
+            if (i % j == 0) {
+                dem++;
+            }
+        }
+        if (dem == 2) {
+            document.write(i + "<br>");
+            demSnt++
+        }
+        dem = 0;
+    }
+
+
+
+
+</script>
+</body>
+</html>

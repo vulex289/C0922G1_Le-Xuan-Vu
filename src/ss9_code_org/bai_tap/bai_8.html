@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyentap01_08</title>
+</head>
+<body>
+<button type="button" onclick="game()">Bắt đầu</button>
+<script>
+    function game() {
+        var nhap=parseInt(prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?'));
+        var soNgauNhien=Math.floor(Math.random()*(nhap+1));
+        var soLuot =1;
+        var i=1;
+        var doan;
+        doan = parseInt(prompt('Nhập số bạn đoán'));
+        let doanSo=true;
+        while (soLuot<3){
+            if (doan==soNgauNhien) {
+                alert('bạn đã đoán đúng');
+                break;
+            }
+            else{
+                doan= parseInt(prompt('Nhập lại số bạn đoán'));
+                doanSo=false
+            }
+            soLuot++;
+        }
+        if (doanSo) alert('chuc mung');
+        else alert("ban da doan qua 3 lan")
+    }
+</script>
+</body>
+</html>
