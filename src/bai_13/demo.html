@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Sample Screen</h3>
+<input type="text" id="a">
+<button onclick="nhap()">Add</button>
+<button onclick="nhap1()">Display</button>
+<p id="result"></p>
+</body>
+<script>
+    // x=0;
+    // let array=Array();
+    // function nhap(){
+    //     array[x]=document.getElementById("a").value;
+    // alert("Element:"+array[x] + "nhap vao"+ x);
+    // x++;
+    // document.getElementById("a").value="";
+    // }
+    // function nhap1() {
+    //
+    // }
+    let x = 0;
+    let array = Array();
+    function nhap() {
+        array[x]=document.getElementById("a").value;
+        alert("Element: " + array[x] + "nhap vao" + x);
+        x++;
+        document.getElementById("a").value=""
+    }
+    function nhap1() {
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element" + i + "=" + array[i] + "<br>";
+            document.getElementById("result").innerHTML = e;
+        }
+    }
+    
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers=[3,1,5,7,2];
+    let max=numbers[0];
+    let sum=0;
+    for (let i=0;i<numbers.length;i++) {
+        if (numbers[i] > max) {
+            max=numbers[i];
+        }
+
+        sum+=numbers[i];
+    }
+    avg=(sum/numbers.length)
+    document.write("Số lớn nhất trong dãy số là:"+max+"<br>")
+    document.write("Trung bình các số trong mảng là:"+avg)
+
+</script>
+</html>

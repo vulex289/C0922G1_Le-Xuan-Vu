@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number= prompt("Tổng số chuỗi bạn nhập vào")
+    let numbers;
+    let arr=[];
+    let count=0
+    for(let i=1;i<=number;i++){
+
+        numbers=prompt("Chuỗi vào lần thứ"+i)
+        arr.push(numbers);
+    }
+    let V=prompt("Nhập vào số V")
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]===V){
+            arr.splice(i,1)
+            arr.push(0);
+        }
+    }
+    alert(arr)
+</script>
+</html>

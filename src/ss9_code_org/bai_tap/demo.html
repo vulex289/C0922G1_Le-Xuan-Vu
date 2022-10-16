@@ -6,41 +6,40 @@
 </head>
 <body>
 <script>
-    let soNt = prompt("nhap so bki:");
-    let dem = 0;
-    let demSnt = 0;
-    // for (let i = 2; i <= 100; i++) {
-    //     if (dem < soNt) {
-    //         for (let j = 1; j <=i; j++) {
-    //             if (i % j === 0) {
-    //                 dem++;
-    //             }
-    //
-    //         }
-    //             if (dem == 2) {
-    //                 document.write(i + "<br>");
-    //                 demSnt++
-    //             }
-    //         dem = 0;
-    //     }
-    //
-    // }
-    let i=2;
-while (dem<soNt) {
-        for (let j = 1; j <= i; j++) {
-            if (i % j == 0) {
-                dem++;
-            }
-        }
-        if (dem == 2) {
-            document.write(i + "<br>");
-            demSnt++
-        }
-        dem = 0;
-    }
-
-
-
+   // let dem=0;
+   // let num=2;
+   // let isPrime=true;
+   // while (dem<20){
+   //     isPrime=true;
+   //     for (let i=2;i<=num;i++){
+   //         if(num%i==0){
+   //             isPrime=false;
+   //             break;
+   //         }
+   //     }
+   //     if(isPrime){
+   //         document.writeln(num+"la so nguyen to <br>");
+   //         dem++;
+   //     }
+   //     num++
+   // }
+   let num = 2;
+   let count = 0;
+   let isPrime = true;
+   while (count <10) {
+       isPrime = true;
+       for(let i =3; i<=num; i++) {
+           if(num%i == 0) {
+               isPrime = false;
+               break;
+           }
+       }
+       if(isPrime) {
+           document.writeln(num+" là số nguyên tố <br>");
+           count++;
+       }
+       num++;
+   }
 
 </script>
 </body>

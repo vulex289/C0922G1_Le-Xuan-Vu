@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Từ Điển</h3>
+<input type="text" id="text"><button onclick="dich()">Dịch</button>
+<p id="result"></p>
+<p>Chỉ dịch được các từ sau:'banana', 'like', 'orange','watermelon','happy'</p>
+</body>
+<script>
+    function dich() {
+        let data1 = ['banana', 'like', 'orange', 'watermelon', 'happy']
+        let data2 = ['chuối', 'thích', 'cam', 'dưa hấu', 'vui']
+        let string = document.getElementById("text").value;
+        let index;
+        let result;
+        let dem = 0;
+        for (let i = 0; i < data1.length; i++) {
+            if (string == data1[i]) {
+                index = data1.indexOf(data1[i])
+                result = data2[index]
+                console.log(result)
+                dem++
+            }
+        }
+        if (dem >= 1) {
+            document.getElementById("result").innerHTML = result;
+        } else {
+            document.getElementById("result").innerHTML = "Không tìm thấy"
+        }
+    }
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Bai 1
+    let myColor=["Red","Green","White","Black"]
+console.log(myColor.join())
+    //Bai 2
+    let numbers=[0,254,6,8];
+    console.log(myColor.join('-'))
+    //Bai 3
+let string=prompt("Nhap vao chuoi so");
+    let arrString=[];
+    let result=[];
+    for (i=0;i<string.length;i++){
+        arrString.push(string.charAt(i))
+    }
+    for (i=0;i<arrString.length;i++){
+        if(arrString[i]==arrString[i].toUpperCase()){
+            result.push(arrString[i].toLowerCase())
+        }
+        else{
+            result.push(arrString[i].toUpperCase())
+        }
+    }
+    document.write(result.join(""))
+
+</script>
+</html>
