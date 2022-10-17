@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA = []
+    let arrB = []
+    let numberA = prompt("Nhập vào số chuỗi A bạn muốn")
+    let numbersA
+    for (let i = 0; i < numberA; i++) {
+        numbersA = prompt("Nhập vào chuỗi thứ:" + i)
+        arrA.push(numbersA)
+    }
+
+    let numberB = prompt("Nhập vào số chuỗi B bạn muốn")
+    let numbersB
+    for (let i = 0; i < numberB; i++) {
+        numbersB = prompt("Nhập vào chuỗi thứ:" + i)
+        arrB.push(numbersB)
+    }
+    let index1;
+    let index2;
+    let count = 0
+    for (let i = 0; i < arrA.length; i++) {
+        index1 = arrA[i];
+        for (let j = 0; j < arrB.length; j++) {
+            index2 = arrB[j]
+            if (index1 === index2) {
+                count++;
+            } else {
+                break;
+            }
+
+        }
+    }
+    if (count == numberA && count == numberB) {
+        alert("hai hàm giống nhau")
+    } else {
+        alert("Hai hàm khác nhau")
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caro Game Simple</h2>
+<p id="carogame"></p>
+<button onclick="nhan()">Change Value</button>
+</body>
+<script>
+    let b = document.getElementById("carogame");
+    let data = '';
+    let board = [['(.)','(.)','(.)','(.)','(.)'],['(.)','(.)','(.)','(.)','(.)'],['(.)','(.)','(.)','(.)','(.)'],['(.)','(.)','(.)','(.)','(.)'],['(.)','(.)','(.)','(.)','(.)']]
+    var h = 1;
+    //Add các phần tử vào mảng hai chiều
+    for(let i = 0; i<5; i++){
+        data += '<br>';
+        for (let j = 0; j < 5; j++){
+            data += board[i][j] + '&nbsp';
+        }
+    }
+    b.innerHTML=data
+    function nhan() {
+    
+    }
+
+</script>
+</html>

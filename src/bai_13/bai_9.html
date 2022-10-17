@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA=[]
+    let arrB=[]
+    let numberA=prompt("Nhập vào số chuỗi A bạn muốn")
+    let numbersA=prompt("Nhập vào chuỗi A thứ:")
+    for (let i=0;i<numberA;i++){
+        numbersA=prompt("Nhập vào chuỗi thứ:"+i)
+        arrA.push(numbersA)
+    }
+    let numberB=prompt("Nhập vào số chuỗi B bạn muốn")
+    let numbersB=prompt("Nhập vào chuỗi B thứ:")
+    for (let i=0;i<numberB;i++){
+        numbersB=prompt("Nhập vào chuỗi thứ:"+i)
+        arrB.push(numbersB)
+    }
+    let c=arrA.concat(arrB)
+    console.log(c);
+</script>
+</html>
