@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // //tham số
+    // function showMessage(parameter1, parameter2) {
+    //     alert("Hello " + parameter1 + " " + parameter2 + "!");
+    // }
+    //
+    // showMessage("Minh", "Hoàng","Vũ");       // Hello Minh Hoàng!
+    // showMessage(100, 99.99);            // Hello 100 99.99!
+    // showMessage(true, "2018/10/20");
+    //
+    // function showMessage(parameter1, parameter2) {
+    //     alert("Hello " + arguments[0] + " " + arguments[1] + "!");
+    // }
+    //
+    // showMessage("Minh", "Hoàng");
+    // showMessage(100, 99.99);
+    // showMessage(true, "2018/10/20");
+    // //
+    // function showMessage() {
+    //     alert("Hello " + arguments[0] + " " + arguments[1] +" "+arguments[2]+ "!");
+    // }
+    //
+    // showMessage("Minh", "Hoàng", "Mr.");
+    // showMessage(100);
+    // //
+    // function showMessage() {
+    //     for(let i = 0;i< arguments.length; i++) {
+    //         alert(arguments[i]);
+    //     }
+    // }
+    //
+    // showMessage("Minh", "Hoàng", "Blog");
+    // //
+    function minArray(arr) {
+            if(arr.length==0)
+                return  -1;
+            let min = arr[0]
+                for(let i = 0; i < arr.length; i++) {
+                    if (arr[i] < min) {
+                        min = arr[i];
+                    }
+                }
+                return min
+                }
+                    let arr1=[-1];
+    let min=minArray(arr1);
+    alert(min)
+    //
+    //     }
+    //     return sum;
+    // }
+    // alert(findMax(1,123,200,33,-200));
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    arr1=['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    arr2=['Ursa','Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa','Major','Leo']
+    function findStar(text) {
+        let result
+        for (let i=0;i<arr1.length;i++)
+        if(text==arr1[i]){
+            result=arr2[i]
+            break;
+
+        }
+        else{
+           result= "Không tìm thấy sao"
+        }
+        return result;
+    }
+    alert(findStar(prompt("Nhập vào sao")))
+
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function tinhGiaiThua(n) {
+        let i=1;
+        let giaiThua=1;
+        while(i<=n){
+
+            giaiThua*=i;
+            i++;
+        }
+        document.write("Giai thừa của" + n + "là:"+giaiThua)
+    }
+    let number=parseInt(prompt("Nhập vào số giai thừa"))
+    tinhGiaiThua(number)
+</script>
+
+</html>
