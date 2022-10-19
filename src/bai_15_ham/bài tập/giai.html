@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        const s1a = s1.split("")
+        const s2a = s2.split("")
+        let count = 0
+
+        s1a.forEach(x => {
+            if (s2a.includes(x)) {
+                count++;
+                s2a.splice(s2a.indexOf(x), 1)
+            }
+        });
+
+        return count
+    }
+    let a=prompt("Nhập vào kí tự A"+"<br>")
+    let b=prompt("Nhập vào kí tự B")
+    document.write(commonCharacterCount(a,b))
+</script>
+</html>

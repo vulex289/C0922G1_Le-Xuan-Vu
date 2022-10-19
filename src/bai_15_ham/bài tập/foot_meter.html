@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function footMeter(foot) {
+        let meter
+        meter=foot*0.305;
+        document.write(foot+"foot"+"="+meter+"meter"+"<br>")
+    }
+    function meterFoot(meter) {
+        let foot
+        foot=meter*3.279;
+        document.write(meter+"meter"+"="+foot+"foot")
+    }
+    let a=parseFloat(prompt("Nhập vào foot"))
+    let b=parseFloat(prompt("Nhập vào meter"))
+    footMeter(a)
+    meterFoot(b)
+</script>
+</html>

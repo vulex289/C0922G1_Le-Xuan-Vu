@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Viết hàm truyền vào một mảng ký tự,
+    //và một ký tự bất kỳ,
+    // kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    // let arrA = []
+    // let numberA = prompt("Nhập vào số chuỗi A bạn muốn")
+    // let numbersA = prompt("Nhập vào chuỗi A thứ:")
+    // for (let i = 0; i < numberA; i++) {
+    //     numbersA = prompt("Nhập vào chuỗi thứ:" + i)
+    //     arrA.push(numbersA)
+    // }
+
+    function testArr(x, a) {
+        let result
+        let count=0
+        
+        for (let i = 0; i < a.length; i++) {
+            if (x === a[i]) {
+                count++;
+            }
+        }
+        if(count>=1){
+
+            alert("Số lần xuất hiện của x:"+count)
+        }
+            else {
+                result = -1
+            }
+        return result
+    }
+    let arrA = []
+    let numberA = prompt("Nhập vào số chuỗi A bạn muốn")
+    let numbersA
+    for (let i = 1; i <= numberA; i++) {
+        numbersA = prompt("Nhập vào chuỗi thứ:" + i)
+        arrA.push(numbersA)
+    }
+    alert(testArr(prompt("Nhập vào x"), arrA))
+
+</script>
+</html>
