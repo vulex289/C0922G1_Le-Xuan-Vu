@@ -8,6 +8,32 @@
 
 </body>
 <script>
+    // let person = {
+    //     name: ['Bob', 'Smith'],
+    //     age: 32,
+    //     gender: 'male',
+    //     interests: ['music', 'skiing'],
+    //     bio: function () {
+    //         alert(this.name[0] + ' ' + this.name[1] + 'is' + this.age + 'years old. He likes' + this.interests[0] + 'and' + this.interests[1] + '.');
+    //     },
+    //     greeting: function () {
+    //         alert('Hi! I/m' + this.name[0] + '.')
+    //
+    //     }
+    // }
+    // person.bio()
+    // person.greeting()
+    function Apple(type) {
 
+
+        this.type = type;
+        this.color = "red";
+        this.getInfo = function () {
+            return this.color + ' ' + this.type + ' apple';
+        }
+    }
+    let apple = new Apple('macintosh');
+    apple.color = "reddish";
+    alert(apple.getInfo());
 </script>
 </html>
