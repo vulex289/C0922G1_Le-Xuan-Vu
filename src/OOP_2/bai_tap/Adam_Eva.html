@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        decrease() {
+            this.weight--
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        Human() {
+            return this.name
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        isMale() {
+            if (this.gender == 1) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                return "male"
+            } else {
+                return "female"
+            }
+        }
+
+        checkApple(apple) {
+            if (apple.isEmpty()) {
+                alert("Hết táo ăn rồi")
+            } else {
+                document.write(this.Human() + ":" + "Ăn tiếp đi eva" + "<br>")
+            }
+        }
+
+        eat(apple) {
+            if (apple.isEmpty()) {
+                document.write("Hết táo rồi")
+            } else {
+                document.write(this.Human() + "đang ăn" + "<br>")
+                this.weight++
+                apple.decrease()
+            }
+        }
+
+        say(string) {
+            document.write(this.Human() + ":" + string)
+        }
+    }
+
+    let adam = new Human("adam", 1, 70);
+    let eva = new Human("eva", 2, 50)
+    let apple1 = new Apple(10)
+    adam.checkApple(apple1)
+    eva.eat(apple1)
+    document.write("giới tính:" + eva.setGender() + "<br>")
+    document.write("Cân nặng của" + " " + eva.Human() + " " + eva.getWeight() + "<br>")
+    adam.say("i love you")
+</script>
+</html>

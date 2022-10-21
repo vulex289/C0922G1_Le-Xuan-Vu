@@ -11,13 +11,11 @@
    // Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
    function findN(text) {
-
-        if (isNaN(text)) {
-            return false
-        } else {
+        if (text == parseInt(text)) {
             return true
+        } else {
+            return false
         }
-
     }
 
     alert(findN(prompt("Nhập vào x")))
