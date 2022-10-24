@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function differentSymbolsNaive(s) {
+        let count=s.length;
+        for (let i = 0; i < s.length; i++) {
+            for (let j = 0; j < s.length; j++) {
+                if (s[i] == s[j+i+1]) {
+                    count--
+                }
+            }
+        }
+    return count
+    }
+    let a=prompt("Nhập vào kí tự")
+    alert(differentSymbolsNaive(a))
+</script>
+</html>

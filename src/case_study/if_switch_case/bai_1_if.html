@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseInt(prompt("Nhập số lương nhân viên nhận được"))
+    if (a >= 15000000) {
+        let luongA = a - a * 0.2
+        document.write("Lương sau khi trừ thuế là:" + luongA)
+    } else if (a == 7000000 && a < 15000000) {
+        let luongB = a - a * 0.1
+        document.write("Lương sau khi trừ thuế là:" + luongB)
+    } else if(a>0&&a<7000000){
+        let luongC = a - a * 0.05
+        document.write("Lương sau khi trừ thuế là:" + luongC)
+    }
+</script>
+</html>

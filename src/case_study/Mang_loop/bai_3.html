@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = [];
+    let b = [];
+
+    function maxFraction(a, b) {
+        let result
+        for (let i = 0; i < a.length; i++) {
+            let max = a[0] / b[0]
+            if ((a[i] / b[i]) > max) {
+                max = a[i] / b[i]
+                result = a.indexOf(a[i])
+            } else {
+                result = a.indexOf(a[0])
+            }
+        }
+        return result
+    }
+
+    let arr1 = [15, 6, 9]
+    let arr2 = [6, 3, 4]
+    alert(maxFraction(arr1, arr2))
+</script>
+</html>

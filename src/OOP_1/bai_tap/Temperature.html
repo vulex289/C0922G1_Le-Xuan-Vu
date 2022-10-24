@@ -8,23 +8,26 @@
 
 </body>
 <script>
-    class Temperature{
+    class Temperature {
         constructor(C) {
             this.C = C;
         }
-        changeF(){
-            let F=(this.C*1.8)+32
+
+        changeF() {
+            let F = (this.C * 1.8) + 32
             return F
-            }
-            changeK(){
-            let K=this.C+273.15
-                return K
-            }
         }
-        let temperature=new Temperature(5)
-    let vu=temperature.changeF()
-    let vu1=temperature.changeK()
-    document.write("Nhiệt độ F:"+" "+vu+"<br>")
-    document.write("Nhiệt độ K:"+" "+vu1)
+
+        changeK() {
+            let K = this.C + 273.15
+            return K
+        }
+    }
+
+    let temperature = new Temperature(5)
+    let vu = temperature.changeF()
+    let vu1 = temperature.changeK()
+    document.write("Nhiệt độ F:" + " " + vu + "<br>")
+    document.write("Nhiệt độ K:" + " " + vu1)
 </script>
 </html>

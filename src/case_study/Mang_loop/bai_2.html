@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = []
+    let b = []
+
+    function missingValue(a, b) {
+        if (a.length < b.length) {
+            for (let i = 0; i < a.length; i++) {
+                for (let j = 0; j < b.length; j++) {
+                    if (a[i] == b[j]) {
+                        b.splice(j, 1)
+                    }
+
+                }
+            }
+
+            document.write(b)
+        } else {
+            for (let i = 0; i < b.length; i++) {
+                for (let j = 0; j < a.length; j++) {
+                    if (b[i] == a[j]) {
+                        a.splice(j, 1)
+                    }
+                }
+            }
+            document.write(a)
+        }
+    }
+
+    let arrA = [];
+    let arrB = [];
+    let numberA = parseInt(prompt("Nhập vào độ dài mảngA"))
+    for (let h = 1; h <= numberA; h++) {
+        let numbersA = parseInt(prompt("Nhập vào sô thứ:" + h))
+        arrA.push(numbersA)
+    }
+    document.write("Mảng A là=" + arrA + "<br>")
+    let numberB = parseInt(prompt("Nhập vào độ dài mảngB"))
+    for (let k = 1; k <= numberB; k++) {
+        let numbersB = parseInt(prompt("Nhập vào sô thứ:" + k))
+        arrB.push(numbersB)
+    }
+    document.write("Mảng B là=" + arrB + "<br>")
+    missingValue(arrA, arrB)
+</script>
+</html>

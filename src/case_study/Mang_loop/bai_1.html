@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA=[];
+    let number=parseInt(prompt("Nhập vào độ dài mảng"))
+
+    for(let i=1;i<=number;i++){
+        let numbers=parseInt(prompt("Nhập vào sô thứ:"+i))
+      arrA.push(numbers)
+    }
+    document.write(arrA+"<br>")
+    function prefixSums(a) {
+        a = [];
+        let b = 0;
+        for (let j = 0; j < number; j++) {
+            b += arrA[j]
+            a.push(b)
+        }
+        document.write(a)
+    }
+    prefixSums(arrA)
+
+</script>
+</html>
