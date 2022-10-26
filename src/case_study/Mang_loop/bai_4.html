@@ -5,48 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<h3>Chuyển số sang chữ</h3>
-<p>Nhập vào một số</p><input type="text" id="text">
-<button onclick="change()">change </button>
-<p id="result"></p>
 </body>
 <script>
-    let a
-    let b
-    function change() {
-        let string = document.getElementById("text").value;
-        a = [1,2,3,1234]
-        b = ["một","hai","ba","một hai ba bốn"]
-        function changeNumberToString(string, a, b) {
-            let index
-            let result
-            for (let i = 0; i < a.length; i++) {
-                if (string == a[i]) {
-                    index = a.indexOf(a[i])
-                    result = b[index]
+    function changeNumberToString(string) {
+        let a = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
+        let string1 = string.split("")
+        console.log(string1)
+        let result
+        let arrA = []
+        for (let i = 0; i < string1.length; i++) {
+            for (let j = 0; j < a.length; j++) {
+                if (string1[i] == a.indexOf(a[j])) {
+                    arrA.push(a[j])
                 }
             }
-           document.getElementById("result").innerHTML=result
         }
-        changeNumberToString(string,a,b)
+        result = arrA.join(" ")
+        alert(result)
     }
+
+    let v = (prompt())
+    changeNumberToString(v)
 </script>
-<!--<script>-->
 
-
-<!--        function diagonalDifference(arr) {-->
-<!--            let sum1=0;-->
-<!--            let sum2=0;-->
-<!--            let sum;-->
-<!--            for(let i=0;i<arr.length;i++){-->
-<!--                sum1+=arr[i][i];-->
-<!--                sum2+=arr[i][arr.length-i-1]-->
-<!--            }-->
-<!--            sum=Math.abs(sum1-sum2)-->
-<!--            return sum-->
-<!--        }-->
-
-<!--    let a=[[1,2,3],[4,5,6],[7,8,9]]-->
-<!--alert(diagonalDifference(a))-->
-<!--</script>-->
 </html>

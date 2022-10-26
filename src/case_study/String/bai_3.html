@@ -8,6 +8,23 @@
 
 </body>
 <script>
-    function commonCharacterCount(a,b){}
+    function commonCharacterCount(s1,s2){
+        let a=s1.split("")
+        let b=s2.split("")
+        let count =0
+        for(let i=0;i<a.length;i++){
+            for(let j=0;j<b.length;j++){
+                if(a[i]===b[j]){
+                    a.splice(i,1)
+                    b.splice(j,1)
+                    count++
+                }
+            }
+        }
+        alert(count)
+    }
+        let stringA=prompt("Nhập vào giá trị")
+        let stringB=prompt("Nhập vào giá trị")
+    commonCharacterCount(stringA,stringB)
 </script>
 </html>

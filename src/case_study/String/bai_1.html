@@ -9,15 +9,14 @@
 </body>
 <script>
     function main(a) {
-        let text = a.toLowerCase()
-        let b = text.split(" ")
-        for (let i = 0; i < b.length; i++) {
-            if (b[i] === "") {
-                b.splice(i, 1)
+        let text = a.toLowerCase().split(" ")
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === "") {
+                text.splice(i, 1)
                 i--
             }
         }
-        let c = b.join(" ")
+        let c = text.join(" ")
         let d = c.split("")
         for (let j = 0; j < d.length; j++) {
             if (d[j] == " " && d[j + 1] !== " ") {
@@ -26,25 +25,22 @@
             }
         }
         let h = d.join("")
-        alert(h.charAt(0).toUpperCase() + h.slice(1))
+        let v = h.charAt(0).toUpperCase() + h.slice(1)
+        alert(v)
+        let k = v.split(" ")
+        let max = 0
+        let result
+        for (let z = 0; z < k.length; z++) {
+            if (max < k[z].length) {
+                max = k[z].length
+                result = k[z]
+            }
+        }
+        alert("Chữ dài nhất trong mảng là:" + result)
     }
 
     let v = prompt("Nhập tên sai")
     main(v)
-    let e=v.split("")
-    alert(e)
-    // function findStringLongest() {
-    //
-    //     let max = b[0]
-    //     for (let m = 0; m < b.length; m++) {
-    //         if (max < b[m]) {
-    //             max = b[m]
-    //         }
-    //         else if(max===b[m]){
-    //             max="Các từ bằng nhau"
-    //         }
-    //     }
-    //     return max
-    // }
+
 </script>
 </html>

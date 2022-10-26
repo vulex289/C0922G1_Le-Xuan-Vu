@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//     let count = 0
+//     function checkEqualFrequency(a) {
+//         let b=a.length
+//         for (let j = 0; j < a.length; j++) {
+//             for (let h = 1; h < a.length; h++) {
+//                 if (a[j] === a[h]) {
+//                     count++
+//                     a.splice(h,1)
+//
+//                 }
+//             }
+//         }
+// alert(count)
+//         if (b === count *count) {
+//             alert("true")
+//         } else {
+//             alert("false")
+//         }
+//     }
+let arrA = [1, 2, 3, 4, 2, 1, 3, 4]
+let count = 0
+for (let i = 0; i < arrA.length; i++) {
+    for (let j = 1 + i; j < arrA.length; j++) {
+        if (arrA[i] == arrA[j]) {
+            count++
+        }
+    }
+}
+alert(count)
+</script>
+</html>
