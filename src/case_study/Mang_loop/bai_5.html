@@ -2,11 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Order Drinks</title>
 </head>
 <body>
-</body>
 <script>
-
+    let menu = [" cafe", " cam vắt", " nước ép cà rốt", " nước ép cà chua", " nước lọc", " nước dừa"];
+    let price = [10000, 15000, 15000, 15000, 5000, 10000];
+    let a = prompt("Menu:\n" + "0.Cafe\n" +
+        "1.Cam vắt\n" +
+        "2.Nước ép cà rốt\n" +
+        "3.Nước ép cà chua\n" +
+        "4.Nước lọc\n" +
+        "5.Nước dừa\n" +
+        "7.Exit\n")
+    let arrA = []
+    let arrB = []
+    let sum = 0;
+    do {
+        if (a < 7) {
+            alert("Giá " + "" + menu[a] + "là" + price[a])
+            let sl = prompt("Nhập số lượng sản phẩm")
+            arrA.push(sl + menu[a])
+            let cost = (sl * price[a])
+            alert("Giá tiền của quý khách:" + cost + 'vnd')
+            arrB.push(cost)
+            a = prompt("Bấm 0-5 để đặt tiếp hoặc bấm 7 để exit")
+        } else {
+            for (let j = 0; j < arrB.length; j++) {
+                sum += arrB[j]
+            }
+            break;
+        }
+    } while (a !== 7)
+    alert("Các món quý khách đã chọn:" + arrA)
+    alert("Tổng số tiền quý khách thanh toán là:" + sum)
+    alert("Cảm ơn quý khách!")
 </script>
+</body>
 </html>

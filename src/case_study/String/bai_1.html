@@ -8,15 +8,43 @@
 
 </body>
 <script>
-    function main(s) {
-        for (let i = 0; i < s.length; i++) {
-            if (s[i] === 'a') {
-             s.splice(i,1)
+    function main(a) {
+        let text = a.toLowerCase()
+        let b = text.split(" ")
+        for (let i = 0; i < b.length; i++) {
+            if (b[i] === "") {
+                b.splice(i, 1)
+                i--
             }
         }
-        alert(s)
+        let c = b.join(" ")
+        let d = c.split("")
+        for (let j = 0; j < d.length; j++) {
+            if (d[j] == " " && d[j + 1] !== " ") {
+                let m = d[j + 1].toUpperCase()
+                d.splice(j + 1, 1, m)
+            }
+        }
+        let h = d.join("")
+        alert(h.charAt(0).toUpperCase() + h.slice(1))
     }
-    let a=prompt()
-    main(a)
+
+    let v = prompt("Nhập tên sai")
+    main(v)
+    let e=v.split("")
+    alert(e)
+    // function findStringLongest() {
+    //
+    //     let max = b[0]
+    //     for (let m = 0; m < b.length; m++) {
+    //         if (max < b[m]) {
+    //             max = b[m]
+    //         }
+    //         else if(max===b[m]){
+    //             max="Các từ bằng nhau"
+    //         }
+    //     }
+    //     return max
+    // }
 </script>
 </html>
