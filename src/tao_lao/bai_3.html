@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findF(a) {
+        let arrA = []
+        let b = []
+        arrA[0] = 0
+        arrA[1] = 1
+        for (let i = 2; i < 100; i++) {
+            arrA[i] = arrA[i - 1] + arrA[i - 2]
+        }
+        for (let j = 0; j < a.length; j++) {
+            for (let k = 0; k < arrA.length; k++) {
+                if (a[j] == arrA[k]) {
+                    b.push(a[j])
+                    break;
+                }
+            }
+        }
+        alert(b)
+        let c = b.sort((a, b) => a - b)
+        alert(c)
+    }
+
+    let num = prompt("Nhập vào độ dài mảng")
+    let arrB = []
+    for (let l = 0; l < num; l++) {
+        let numberA = parseInt(prompt("Nhập vào phần tử thứ:" + l))
+        arrB.push(numberA)
+    }
+    alert(arrB)
+    findF(arrB)
+
+</script>
+</html>

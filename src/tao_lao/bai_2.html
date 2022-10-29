@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function main(string) {
+        let count = 0
+        for (let j = 0; j < string.length; j++) {
+            if (string[j] == " ") {
+                count++
+            }
+        }
+        if (count > 0) {
+            let a = string.split("")
+            let b = []
+            b[0] = a[0].toUpperCase()
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == " " && a[i + 1] !== " ") {
+                    b.push(a[i + 1].toUpperCase())
+                }
+            }
+            let c = b.join("")
+            alert(c)
+        } else {
+            alert("Chuỗi chỉ có 1 từ nên không cần viết tắc")
+        }
+    }
+
+
+    let vu = prompt()
+    main(vu)
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA=[]
+    let numberA=prompt("Nhập vào độ dài mảng")
+    for (let i=0;i<numberA;i++){
+        let numbersA=prompt("Nhập vào index:"+i)
+        arrA.push(numbersA)
+    }
+    for(let k=0;k<arrA.length;k++) {
+        for (let l = 1; l < arrA.length; l++) {
+            if (arrA[k] == arrA[l + k]) {
+                arrA.splice(l + k, 1)
+            }
+        }
+    }
+           alert(arrA)
+</script>
+</html>

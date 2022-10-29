@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findNumber(a) {
+        let b = []
+        let c = []
+        for (let j = 0; j < a.length; j++) {
+            if (j % 3 == 0 && a[j] % 5 == 0) {
+                b.push(a[j])
+            }
+        }
+        alert(b)
+
+        let avg
+        let sum = 0
+        for (let n = 0; n < b.length; n++) {
+            sum += b[n]
+        }
+
+        avg = sum / b.length
+        alert(avg)
+    }
+
+    let num = prompt("Nhập vào độ dài mảng")
+    let arrA = []
+    for (let i = 0; i < num; i++) {
+        let numberA = parseInt(prompt("Nhập vào phần tử thứ:" + i))
+        arrA.push(numberA)
+    }
+    alert(arrA)
+    findNumber(arrA)
+</script>
+</html>
