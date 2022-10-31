@@ -11,7 +11,7 @@
     function main(string) {
         let count = 0
         for (let j = 0; j < string.length; j++) {
-            if (string[j] == " ") {
+            if (string[j] === " ") {
                 count++
             }
         }
@@ -20,7 +20,7 @@
             let b = []
             b[0] = a[0].toUpperCase()
             for (let i = 0; i < a.length; i++) {
-                if (a[i] == " " && a[i + 1] !== " ") {
+                if (a[i] === " " && a[i + 1] !== " ") {
                     b.push(a[i + 1].toUpperCase())
                 }
             }
@@ -30,9 +30,8 @@
             alert("Chuỗi chỉ có 1 từ nên không cần viết tắc")
         }
     }
-
-
     let vu = prompt()
     main(vu)
+
 </script>
 </html>

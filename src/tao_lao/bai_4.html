@@ -17,41 +17,41 @@
     // Lớp điện thoại: có 4 thuộc tính tên, giá, màu sắc, nhà sản xuất.
     class Phone {
         constructor(name, price, color, producer) {
-            this._name = name;
-            this._price = price;
-            this._color = color;
-            this._producer = producer;
+            this.name = name;
+            this.price = price;
+            this.color = color;
+            this.producer = producer;
         }
         getName() {
-            return this._name;
+            return this.name;
         }
 
         setName(value) {
-            this._name = value;
+            this.name = value;
         }
 
         getPrice() {
-            return this._price;
+            return this.price;
         }
 
         setPrice(value) {
-            this._price = value;
+            this.price = value;
         }
 
         getColor() {
-            return this._color;
+            return this.color;
         }
 
         setColor(value) {
-            this._color = value;
+            this.color = value;
         }
 
         getProducer() {
-            return this._producer;
+            return this.producer;
         }
 
         setProducer(value) {
-            this._producer = value;
+            this.producer = value;
         }
     }
 
@@ -75,8 +75,8 @@
                 "<td>"+array[i].getColor() +"</td>" +
                 "<td>"+array[i].getProducer() +"</td>" +
                 "<td>" +
-                "<button id='update' onclick='edit( "+ i + ")'>Update</button>" +
-                "<button id='delete' onclick='remove( "+ i + ")'>Delete</button>" +
+                "<button id='update' onclick='edit("+i+" )'>Update</button>" +
+                "<button id='delete' onclick='remove( "+i+")'>Remove</button>" +
                 "</td>" +
                 "</tr>"
         }

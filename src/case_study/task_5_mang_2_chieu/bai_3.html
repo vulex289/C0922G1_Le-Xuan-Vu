@@ -9,24 +9,20 @@
 </body>
 <script>
     function findMaxMin(a) {
-        let Max = 0;
-        let Min =a[0][0];
+        let Max = -Infinity;
+        let Min = Infinity;
         for (let o = 0; o < a.length; o++) {
             for (let p = 0; p < a[o].length; p++) {
                 if (a[o][p] > Max) {
                     Max = a[o][p]
                 }
-            }
-        }
-        for (let c = 0; c < a.length; c++) {
-            for (let d = 0; d < a[c].length; d++) {
-                if (a[c][d] <= Min) {
-                    Min = a[c][d]
+                if (a[o][p] < Min) {
+                    Min = a[o][p]
                 }
             }
         }
-            alert("Giá trị lớn nhất của mảng 2 chiều là:"+Max)
-            alert("Giá trị nhỏ nhất của mảng 2 chiều là:"+Min)
+        alert("Giá trị lớn nhất của mảng 2 chiều là:" + Max)
+        alert("Giá trị nhỏ nhất của mảng 2 chiều là:" + Min)
 
     }
 
@@ -36,7 +32,7 @@
     for (let i = 0; i < m; i++) {
         arrA[i] = []
         for (let j = 0; j < n; j++) {
-            let a = prompt("Nhập vào phần tử")
+            let a = prompt("Nhập vào phần tử"+i)
             arrA[i].push(a)
         }
     }
