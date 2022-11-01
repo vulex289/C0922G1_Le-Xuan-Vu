@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = []
+    let n = prompt("Độ dài mảng")
+    for (let l = 0; l < n; l++) {
+        let numberA = +prompt("Nhập vào phần tử")
+        a.push(numberA)
+    }
+
+    function findIndex(c) {
+        let b = []
+        let min = c[0]
+        for (let j = 0; j < c.length; j++) {
+            if (c[j] <= min) {
+                min = c[j]
+            }
+        }
+        for (let i = 0; i < c.length; i++) {
+            if (c[i] == min)
+                b.push(i)
+        }
+        alert("Vị trí các số nhỏ nhất là" + b)
+    }
+
+    findIndex(a)
+
+</script>
+</html>

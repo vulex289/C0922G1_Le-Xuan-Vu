@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=[]
+    let n=prompt("Độ dài mảng")
+    for(let l=0;l<n;l++){
+        let numberA=+prompt("Nhập vào phần tử")
+        a.push(numberA)
+    }
+    function divideArray(a) {
+        let b=[]
+        let c=[]
+        for(let i=0;i<a.length;i++){
+            if(a[i]%2===0){
+                b.push(a[i])
+            }
+            else{
+                c.push(a[i])
+            }
+        }
+alert(b)
+        alert(c)
+    }
+    divideArray(a)
+</script>
+</html>

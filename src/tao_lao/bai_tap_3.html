@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA = [];
+    let numberA = (prompt("Nhập vào độ dài mảng A"))
+    let i = 0
+    do {
+        let count = 0
+        let numbersA = (prompt("Nhập vào index:" + i))
+        arrA.push(numbersA)
+        for (let j = i - 1; j >= 0; j--) {
+            if (arrA[i] == arrA[j]) {
+                count = 1
+                alert("Phần tử đã tồn tại");
+                arrA.splice(j, 1)
+                break;
+            }
+        }
+        if (count == 1) {
+            continue;
+        } else {
+            i++
+        }
+    }
+    while (i < numberA)
+    alert(arrA)
+</script>
+</html>

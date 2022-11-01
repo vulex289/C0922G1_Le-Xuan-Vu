@@ -5,97 +5,87 @@
     <title>List</title>
 </head>
 <body>
-<h3 align="center">Tài khoản ngân hàng</h3>
-<button onclick="creat()">Creat a new account</button>
+<h3 align="center">Cafe's VUTEA</h3>
+<button onclick="create()">Create new id</button>
 <p id="display"></p>
+<button onclick="totalAll()">Total Menu</button>
+<p id="result"></p>
 </body>
 <script>
-  class Acount{
-      constructor(id,name,namebank,total) {
-          this.id=id;
-          this.name=name;
-          this.namebank=namebank;
-          this.total=total;
-      }
-      getId(){
-          return this.id
-      }
-      setId(value){
-          this.id=value
-      }
-
-  getName(){
-      return this.name
-  }
-  setName(value){
-      this.name=value
-  }
-
-  getNamebank(){
-      return this.namebank
-  }
-  setNamebank(value){
-      this.namebank=value
-  }
-
-  getTotal(){
-      return this.total
-  }
-  setTotal(value){
-      this.total=value
-  }
-  }
-  let alex=new Acount(1,'alex','Hdbank',500)
-    let tom=new Acount(2,'tom','SCbank',700)
-    let array=[alex,tom]
-    function display(array) {
-        let sout="<table border='1'>"+"<tr>"+"<th>Id</th>"+"<th>Name</th>"
-            +"<th>Namebank</th>"+"<th>Total</th>"+"<th >Edit</th>"+"</tr>"
-        for(let i=0;i<array.length;i++){
-            sout+="<tr>"+"<td>"+array[i].getId()+"</td>"+"<td>"+array[i].getName()+"</td>"+
-                "<td>"+array[i].getNamebank()+"</td>"+"<td>"+array[i].getTotal()+"</td>"+
-                "<td>"+"<button onclick='remove("+i+")'>remove</button>" +
-                "<button onclick='repair("+i+")'>repair</button>"+"</td>"+
-
-                "</tr>"
-        }
-        sout+="</table>"
-     document.getElementById("display").innerHTML=sout
+class Menu {
+    constructor(id,name,amount,price) {
+        this.id=id;
+        this.name=name;
+        this.amount=amount;
+        this.price=price;
     }
-    display(array)
-    function creat() {
-      let id=prompt("Nhập vào id khách hàng")
-        while(id.length!==5||isNaN(id)){
-      id=prompt("Nhập vào id khách hàng gồm 5 số")}
-        let name=prompt("Nhập vào tên khách hàng")
-        let namebank=prompt("Nhập vào ngân hàng")
-        let total=+prompt("Nhập vào tổng tiền khách hàng")
-        let acount=new Acount(id,name,namebank,total)
-        array.push(acount)
+    getId(){
+        return this.id
+    }
+    getName(){
+        return this.name
+    }
+    getAmount(){
+        return this.amount
+    }
+    getPrice(){
+        return this.price
+    }
+    setId(value){
+        this.id=value
+    }
+    setName(value){
+        this.name=value
+    }
+    setAmount(value){
+        this.amount=value
+    }
+    setPrice(value){
+        this.price=value
+    }
+}
+let menu0= new Menu(1,"Cafe","<input id='0' type='number'>",15000)
+let menu1= new Menu(2,"Bia","<input id='1' type='number'>",20000)
+let menu2= new Menu(3,"Nước dừa","<input id='2' type='number'>",22000)
+let menu3= new Menu(4,"Nước ngọt","<input id='3' type='number'>",12000)
+    let array=[menu0,menu1,menu2,menu3]
+function display(array) {
+    let sout = "<table border='1'>" + "<tr>\n"
+        + "<th>Id</th>" + "<th>Name</th>"
+        + "<th>Amount</th>" + "<th>Price</th>"+"<th>accept</th>"+"<th>Total</th>"
+        + "</tr>"
+    for (let i = 0; i < array.length; i++) {
+        sout += "<tr>" + "<td>" + array[i].getId() +
+            "</td>" + "<td>" + array[i].getName() +
+            "</td>" + "<td>" + array[i].getAmount() + "</td>"
+            + "<td>" + array[i].getPrice() + "</td>" +"<td>"+"<button onclick='call("+ i +")'>Tạm Tính</button>"+"</td>"+"<td><p id="+'a'+i+"></p></td>"+ "</tr>"
+    }
+    sout += "</table>"
+    document.getElementById("display").innerHTML = sout
+}
+display(array)
+    function create() {
+        let id = prompt("Nhập vào mã số")
+        let name = prompt("Nhập vào tên sản phẩm")
+        let amount = "<input type='number'>"
+        let price = +prompt("Nhập vào giá tiền của sản phẩm")
+        let menu = new Menu(id, name, amount, price)
+        array.push(menu)
         display(array)
     }
-    function remove(value) {
-        let choose = confirm("are you sure")
-            if (choose) {
-                array.splice(value, 1)
-            }
-            display(array)
-        }
-        function repair(value) {
-            let id1=+prompt("Nhập vào id khách hàng")
-            let name1=prompt("Nhập vào tên khách hàng")
-            let namebank1=prompt("Nhập vào ngân hàng")
-            let total1=+prompt("Nhập vào tổng tiền khách hàng")
-            let acount=new Acount(id1,name1,namebank1,total1)
-            array[value]=acount
-            display(array)
-        }
 
+    function call(id) {
 
-
-
-
-
-
+        let amount = document.getElementById(id).value;
+        alert(amount)
+        let result1 = menu.getPrice() * amount
+            document.getElementById('a'+id).innerHTML = result1;
+        // let result1 = menu1.getPrice() * amount
+        // document.getElementById('a'+id).innerHTML = result1;
+        // let result2 = menu2.getPrice() * amount
+        // document.getElementById('a'+id).innerHTML = result2;
+        // let result3 = menu3.getPrice() * amount
+        // document.getElementById('a'+id).innerHTML = result3;
+    }
 </script>
 </html>

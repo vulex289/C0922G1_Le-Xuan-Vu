@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=[]
+    let n=prompt("Độ dài mảng")
+    for(let l=0;l<n;l++){
+        let numberA=+prompt("Nhập vào phần tử")
+        a.push(numberA)
+    }
+    function findNum(d) {
+        let sum=0
+        let avg
+        let b=[]
+        for(let i=0;i<d.length;i++){
+            if(i%2===0&&d[i]%2!==0){
+                b.push(d[i])
+            }
+        }
+        for(let j=0;j<b.length;j++){
+            sum+=b[j]
+        }
+       console.log(sum)
+        console.log(b)
+        avg=sum/b.length
+        alert(avg)
+    }
+    findNum(a)
+</script>
+</html>
